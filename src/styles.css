@@ -57,3 +57,17 @@ body{
 
 
 
+
+/***************************************/
+/*Card container*/
+
+.card{
+  margin-top: 36px;
+}
+
+.card-container-box{
+  background-color: #283535;
+  display: flex;
+  margin:12px auto;
+}
+
