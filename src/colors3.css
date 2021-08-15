@@ -35,7 +35,9 @@
 
 /* As RGBa codes */
 
-.rgba-primary-0 { color: rgba(  0,  0,  0,1) }	/* Main Primary color */
+
+
+.rgba-primary-0 { color: rgba(  0,  0,  0,1) }	/* Main Primary color Fisrt seleccion  */
 .rgba-primary-1 { color: rgba( 87,143,171,1) }
 .rgba-primary-2 { color: rgba( 78,130,155,1) }
 .rgba-primary-3 { color: rgba( 47, 93,116,1) }
