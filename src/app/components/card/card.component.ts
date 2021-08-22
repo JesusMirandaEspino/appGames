@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {  GetallgameService  } from 'src/app/services/getallgame.service';
+import { GameList } from 'src/app/interfaces/listGames';
 
 @Component({
   selector: 'app-card',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  constructor() { }
+
+  public games:GameList[] = [];
+  constructor(  private getGamesServices: GetallgameService  ) { }
+
+
+
+
 
   ngOnInit(): void {
+
+    this.getGamesServices.getGames().subscribe( ( games ) => {
+
+      this.games = games;
+
+      console.log( this.games );
+
+
+    } );
+
+
   }
 
 }

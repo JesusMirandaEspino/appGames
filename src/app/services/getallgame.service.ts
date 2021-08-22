@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map, tap, catchError }  from 'rxjs/operators';
+import { GameList } from 'src/app/interfaces/listGames';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +11,9 @@ export class GetallgameService {
 
 
   private url: string = 'https://api.rawg.io/api/games';
-  page: number = 2;
-  page_size: number = 2 ;
-  count: number = 2;
+  page: number = 1;
+  page_size: number = 1;
+  count: number = 1;
 
 
 
@@ -29,10 +30,10 @@ export class GetallgameService {
     }
 
 
-    getGames (){
+    getGames ():Observable<GameList[]>{
 
-      return this.http.get( `${this.url}`, { params: this.params } )
-      .pipe( map(  (resp )  => resp )  );
+      return this.http.get<GameList[]>( `${this.url}`, { params: this.params } )
+      .pipe( map(  (results )  => results )  );
 
     }
 
