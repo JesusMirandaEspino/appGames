@@ -4,17 +4,19 @@
 <section class="fila card" >
 
   <div class="contenedor1" >
-
-
+    
     <!-- Basic card game --->
-    <div  class="col-full-3 card-container-box"  *ngFor="let game of listGames" >
+    <div  class="col-full-3"  *ngFor="let game of listGames"  >
+      <div  class=" card-container-box" >
 
-      <div class="card-img" >
-        <img [src]="game.background_image" alt="img">
-      </div>
+        <div class="card-img" >
+          <img [src]="game.background_image" alt="img">
+        </div>
 
-      <div class="card-name" >
-        <h2>{{  game.name }}</h2>
+        <div class="card-name" >
+          <h2>{{  game.name }}</h2>
+        </div>
+
       </div>
 
     </div>
