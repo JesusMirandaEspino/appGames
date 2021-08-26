@@ -11,9 +11,9 @@ export class GetallgameService {
 
 
   private url: string = 'https://api.rawg.io/api/games';
-  page: number = 3;
-  page_size: number = 3;
-  count: number = 3;
+  page: number = 12;
+  page_size: number = 12;
+  count: number = 12;
 
 
 

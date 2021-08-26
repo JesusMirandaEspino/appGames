@@ -40,6 +40,10 @@ body{
   color: var( --standar-letter-color );
 }
 
+img{
+  max-width: 100%;
+}
+
 
 /****************************/
 /* navbar */
@@ -70,5 +74,6 @@ body{
   display: flex;
   margin:12px auto;
   border-radius:6px;
+  margin:24px auto;
 }
 
