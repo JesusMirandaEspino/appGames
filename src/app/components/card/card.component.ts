@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {  GetallgameService  } from 'src/app/services/getallgame.service';
-import { GameList } from 'src/app/interfaces/listGames';
+import { GameList, Result } from 'src/app/interfaces/listGames';
 
 @Component({
   selector: 'app-card',
@@ -10,7 +10,8 @@ import { GameList } from 'src/app/interfaces/listGames';
 export class CardComponent implements OnInit {
 
 
-  public games:GameList[] = [];
+  public games:GameList = <GameList>{};
+  public listGames: Result[] = [];
   constructor(  private getGamesServices: GetallgameService  ) { }
 
 
@@ -23,8 +24,9 @@ export class CardComponent implements OnInit {
 
       this.games = games;
 
-      console.log( this.games );
+      this.listGames = this.games.results;
 
+      console.log(  this.listGames );
 
     } );
 

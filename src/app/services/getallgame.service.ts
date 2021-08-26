@@ -11,9 +11,9 @@ export class GetallgameService {
 
 
   private url: string = 'https://api.rawg.io/api/games';
-  page: number = 1;
-  page_size: number = 1;
-  count: number = 1;
+  page: number = 3;
+  page_size: number = 3;
+  count: number = 3;
 
 
 
@@ -30,9 +30,9 @@ export class GetallgameService {
     }
 
 
-    getGames ():Observable<GameList[]>{
+    getGames ():Observable<GameList>{
 
-      return this.http.get<GameList[]>( `${this.url}`, { params: this.params } )
+      return this.http.get<GameList>( `${this.url}`, { params: this.params } )
       .pipe( map(  (results )  => results )  );
 
     }
