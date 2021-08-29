@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild,  ElementRef, Renderer2 } from '@angular/core';
 import {  GetallgameService  } from 'src/app/services/getallgame.service';
 import { GameList, Result } from 'src/app/interfaces/listGames';
 
@@ -12,8 +12,9 @@ export class CardComponent implements OnInit {
 
   public games:GameList = <GameList>{};
   public listGames: Result[] = [];
-  constructor(  private getGamesServices: GetallgameService  ) { }
 
+
+  constructor(  private getGamesServices: GetallgameService, private render: Renderer2  ) { }
 
 
 
@@ -28,8 +29,18 @@ export class CardComponent implements OnInit {
 
       console.log(  this.listGames );
 
+      this.selectelement();
+
     } );
 
+
+
+
+
+  }
+
+
+  selectelement() {
 
   }
 

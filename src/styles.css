@@ -92,7 +92,6 @@ img{
   box-shadow: 4px 4px 10px 3px #000000;
   cursor:pointer;
   transition: all ease 0.3s;
-
 }
 
 .card-container-box-text{
@@ -103,4 +102,9 @@ img{
 
 .card-container-box:hover{
   box-shadow: 4px 4px 10px 3px #99A637;
+}
+
+
+.descubierto{
+  transform: rotateY(180deg);
 }
