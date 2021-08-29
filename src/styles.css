@@ -66,6 +66,15 @@ img{
 /***************************************/
 /*Card container*/
 
+
+.card-box-main{
+  position:relative;
+  transition: transform .5s;
+  transform-style: preserve-3d;
+  width: 100%;
+  display: flex;
+}
+
 .card{
   margin-top: 36px;
 }
@@ -83,8 +92,14 @@ img{
   box-shadow: 4px 4px 10px 3px #000000;
   cursor:pointer;
   transition: all ease 0.3s;
+
 }
 
+.card-container-box-text{
+  position: absolute;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
 
 .card-container-box:hover{
   box-shadow: 4px 4px 10px 3px #99A637;
