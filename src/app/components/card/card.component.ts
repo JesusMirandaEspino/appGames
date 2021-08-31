@@ -14,7 +14,7 @@ export class CardComponent implements OnInit {
   public listGames: Result[] = [];
 
 
-  constructor(  private getGamesServices: GetallgameService, private render: Renderer2  ) { }
+  constructor(  private getGamesServices: GetallgameService  ) { }
 
 
 
