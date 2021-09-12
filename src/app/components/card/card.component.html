@@ -6,14 +6,14 @@
   <div class="contenedor1" >
 
     <!-- Basic card game --->
-    <div  class="col-full-3 card-box-main"  *ngFor="let game of listGames"  >
+    <div  class="col-full-3 card-box-main"   *ngFor="let game of listGames"  >
 
 
       <!-- Principal container box card  -->
-      <div class="card-box-main"   #element >
+      <div class="card-box-main" (click)="selectElement( element )"    #element  >
 
         <!-- Img and name container -->
-          <div  class=" card-container-box" >
+          <div  class=" card-container-box"  >
             <div class="card-img" >
               <img [src]="game.background_image" alt="img">
             </div>
@@ -23,9 +23,11 @@
           <!-- data container game   -->
           <div  class="card-container-box-text" >
 
-            <h2>{{  game.metacritic }}</h2>
+            <h2>Ranking: {{  game.metacritic }}</h2>
 
             <h2>{{  game.name }}</h2>
+
+            <h3>{{ game.released }}</h3>
 
           </div>
 

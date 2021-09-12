@@ -98,6 +98,13 @@ img{
   position: absolute;
   transform: rotateY(180deg);
   backface-visibility: hidden;
+  background-color: #283535;
+  margin-top: 2em;
+  border-radius: 6px;
+  width:90%;
+  height:80%;
+  cursor: pointer;
+  transition: all ease 0.3s;
 }
 
 .card-container-box:hover{
@@ -106,5 +113,10 @@ img{
 
 
 .descubierto{
+  display: flex;
+  width:90%;
+  text-align: center;
+  text-align: center;
+  justify-content:center;
   transform: rotateY(180deg);
 }
