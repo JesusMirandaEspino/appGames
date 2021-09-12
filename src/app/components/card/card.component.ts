@@ -14,6 +14,7 @@ export class CardComponent implements OnInit {
   public listGames: Result[] = [];
 
 
+
   constructor(  private getGamesServices: GetallgameService  ) { }
 
 
@@ -29,7 +30,14 @@ export class CardComponent implements OnInit {
 
       console.log(  this.listGames );
 
-      this.selectelement();
+
+      if( this.listGames.length > 0 ){
+
+        this.selectelement();
+
+      }
+
+
 
     } );
 
@@ -41,6 +49,8 @@ export class CardComponent implements OnInit {
 
 
   selectelement() {
+
+
 
   }
 

@@ -30,7 +30,7 @@ export class GetallgameService {
     }
 
 
-    getGames ():Observable<GameList>{
+    getGames():Observable<GameList>{
 
       return this.http.get<GameList>( `${this.url}`, { params: this.params } )
       .pipe( map(  (results )  => results )  );
