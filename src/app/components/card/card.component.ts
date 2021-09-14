@@ -9,45 +9,26 @@ import { GameList, Result } from 'src/app/interfaces/listGames';
 })
 export class CardComponent implements OnInit {
 
-
   public games:GameList = <GameList>{};
   public listGames: Result[] = [];
   public fondo = true;
 
-
   constructor(  private getGamesServices: GetallgameService  ) { }
-
-
-
 
   ngOnInit(): void {
 
     this.getGamesServices.getGames().subscribe( ( games ) => {
 
       this.games = games;
-
       this.listGames = this.games.results;
-
       console.log(  this.listGames );
-
 
     } );
 
-
-
-
-
   }
 
-
-
-
-
   selectElement(game: HTMLDivElement):void {
-
     game.classList.toggle('descubierto');
-
-
   }
 
 }
