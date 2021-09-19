@@ -137,3 +137,14 @@ img{
 .ocultar{
   color: #283535;
 }
+
+
+footer{
+  background-color:#1A2626;
+}
+
+.footer{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
