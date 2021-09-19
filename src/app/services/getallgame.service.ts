@@ -14,7 +14,7 @@ export class GetallgameService {
   page: number = 24;
   page_size: number = 24;
   count: number = 24;
-
+  key = '9a0493ac96bd473ea8297c8f2ad91efb';
 
 
   constructor(  private http: HttpClient  ) {  }
@@ -22,17 +22,23 @@ export class GetallgameService {
 
     get params(){
       return {
-        key: '9a0493ac96bd473ea8297c8f2ad91efb',
+        key: this.key,
         page: this.page.toString(),
         page_size: this.page_size.toString(),
         count: this.count.toString()
       }
     }
 
-
     getGames():Observable<GameList>{
 
       return this.http.get<GameList>( `${this.url}`, { params: this.params } )
+      .pipe( map(  (results )  => results )  );
+
+    }
+
+
+    searchGame(buscar:string):Observable<GameList>{
+      return this.http.get<GameList>( `${this.url}?search=${buscar}`, { params: this.params } )
       .pipe( map(  (results )  => results )  );
 
     }
