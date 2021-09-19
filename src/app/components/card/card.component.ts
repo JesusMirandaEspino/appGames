@@ -12,6 +12,7 @@ export class CardComponent implements OnInit {
   public games:GameList = <GameList>{};
   public listGames: Result[] = [];
   public fondo = true;
+  mostrar = true;
 
   constructor(  private getGamesServices: GetallgameService  ) { }
 
@@ -27,8 +28,18 @@ export class CardComponent implements OnInit {
 
   }
 
-  selectElement(game: HTMLDivElement):void {
+  selectElement(game: HTMLDivElement, cardtext:HTMLDivElement ):void {
+
+
+
+
+
+
+
     game.classList.toggle('descubierto');
+
+    cardtext.classList.toggle('ocultar');
+
   }
 
 }

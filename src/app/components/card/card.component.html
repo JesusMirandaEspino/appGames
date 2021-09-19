@@ -10,7 +10,7 @@
 
 
       <!-- Principal container box card  -->
-      <div class="card-box-main" (click)="selectElement( element )"    #element  >
+      <div class="card-box-main" (click)="selectElement( element, cardtext )"    #element  >
 
         <!-- Img and name container -->
           <div  class=" card-container-box"  >
@@ -21,13 +21,13 @@
           </div>
 
           <!-- data container game   -->
-          <div  class="card-container-box-text" >
+          <div  class="card-container-box-text ocultar" #cardtext >
 
             <h2>Ranking: {{  game.metacritic }}</h2>
 
-            <h2>{{  game.name }}</h2>
+            <h2 >{{  game.name }}</h2>
 
-            <h3>{{ game.released }}</h3>
+            <h3  >{{ game.released }}</h3>
 
           </div>
 
