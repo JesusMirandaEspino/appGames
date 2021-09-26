@@ -29,6 +29,8 @@ export class GetallgameService {
       }
     }
 
+
+  // Funcion para obtener un listado ramdon de los juegos
     getGames():Observable<GameList>{
 
       return this.http.get<GameList>( `${this.url}`, { params: this.params } )
@@ -36,7 +38,7 @@ export class GetallgameService {
 
     }
 
-
+  // Funcion para buscarun juego y devolver el resultado de la busqueda
     searchGame(buscar:string):Observable<GameList>{
       return this.http.get<GameList>( `${this.url}?search=${buscar}`, { params: this.params } )
       .pipe( map(  (results )  => results )  );
