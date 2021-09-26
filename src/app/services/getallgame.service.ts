@@ -40,7 +40,7 @@ export class GetallgameService {
 
   // Funcion para buscarun juego y devolver el resultado de la busqueda
     searchGame(buscar:string):Observable<GameList>{
-      return this.http.get<GameList>( `${this.url}?search=${buscar}`, { params: this.params } )
+      return this.http.get<GameList>( `${this.url}?search=${buscar}&key=${this.key}` )
       .pipe( map(  (results )  => results )  );
 
     }
