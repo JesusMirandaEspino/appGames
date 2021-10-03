@@ -11,7 +11,7 @@ export class SearchComponent implements OnInit {
 
   public games:GameList = <GameList>{};
   public listGames: Result[] = [];
-
+  public gameTittle: string = '';
 
   constructor( private getallgame: GetallgameService ) { }
 
@@ -38,6 +38,9 @@ export class SearchComponent implements OnInit {
       this.listGames = this.games.results;
 
       console.log( this.listGames  );
+
+
+      this.gameTittle = game;
 
 
       // Limpiar el input
