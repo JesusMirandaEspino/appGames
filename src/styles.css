@@ -198,3 +198,111 @@ footer{
   font-size: 24;
 
 }
+
+
+
+
+
+/* Responsive */
+
+
+@media(max-width:320px)
+{
+
+.search{
+    margin-top: 18px;
+    font-size: 14px;
+  }
+
+
+  .search label {
+
+    margin-right: 12px;
+
+  }
+
+  .search button{
+    margin-left: 18px;
+    font-size: 16px;
+
+  }
+
+
+  .search-container{
+    min-height: 200px;
+  }
+
+
+  .gameTittle{
+    font-size: 18;
+  }
+
+}
+
+
+
+@media(min-width:321px) and (max-width:468px)
+{
+  .search{
+      margin-top: 18px;
+      font-size: 14px;
+    }
+
+
+    .search label {
+
+      margin-right: 12px;
+
+    }
+
+    .search button{
+      margin-left: 18px;
+      font-size: 16px;
+
+    }
+
+
+    .search-container{
+      min-height: 200px;
+    }
+
+
+    .gameTittle{
+      font-size: 18;
+    }
+
+}
+
+
+
+
+@media(min-width:469px) and (max-width:568px)
+{
+  .search{
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+
+    .search label {
+
+      margin-right: 14px;
+
+    }
+
+    .search button{
+      margin-left: 20px;
+      font-size: 16px;
+
+    }
+
+
+    .search-container{
+      min-height: 300px;
+    }
+
+
+    .gameTittle{
+      font-size: 20;
+    }
+}
