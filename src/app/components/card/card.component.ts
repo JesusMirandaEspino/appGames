@@ -30,12 +30,6 @@ export class CardComponent implements OnInit {
 
   selectElement(game: HTMLDivElement, cardtext:HTMLDivElement ):void {
 
-
-
-
-
-
-
     game.classList.toggle('descubierto');
 
     cardtext.classList.toggle('ocultar');
